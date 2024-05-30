@@ -7,6 +7,7 @@ export default {
         brand: {
           purple: '#8713D5',
           orange: '#F99F3E',
+          background: "#0E0C15",
         },
       },
     },
