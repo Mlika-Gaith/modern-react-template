@@ -1,14 +1,19 @@
 import { useState } from "react";
 import Navbar from "../components/navbar"
+import Hero from "../components/hero";
 
-const Home = () =>{
+const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
-    const toggle = () =>{
+    const toggle = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <Navbar toggle={toggle}/>
-    )  
+        <>
+            <Navbar toggle={toggle} />
+            <Hero />
+        </>
+
+    )
 }
 
 export default Home;

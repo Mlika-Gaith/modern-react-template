@@ -7,4 +7,11 @@
   margin: 0;
   padding: 0;
   font-family: 'Gentium Book Plus', serif;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-background text-n-1 text-base;
+  }
 }
