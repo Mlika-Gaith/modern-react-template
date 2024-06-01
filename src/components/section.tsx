@@ -1,11 +1,11 @@
 import SectionSvg from "./assets/section-svg";
 
 type Props = {
-    className: string;
+    className?: string;
     id: string | undefined;
-    crosses: any;
-    crossesOffset: string;
-    customPaddings: any;
+    crosses?: any;
+    crossesOffset?: string | undefined;
+    customPaddings?: any;
     children: any;
 }
 const Section = ({ className, id, crosses, crossesOffset, customPaddings, children }: Props) => {

@@ -1,7 +1,7 @@
 import PlusSvg from "./plus-svg"
 
 type Props = {
-    crossesOffset: string;
+    crossesOffset: string | undefined;
 }
 
 const SectionSvg = ({ crossesOffset }: Props) => {
