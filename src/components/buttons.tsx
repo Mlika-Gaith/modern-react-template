@@ -43,7 +43,7 @@ export const Button = ({
         className={`${width} rounded-[5px] flex items-center justify-center
         ${primary ? 'bg-brand-purple' : 'bg-brand-purple'} text-n-1 
         ${big ? 'px-12 py-4' : 'px-8 py-3'} ${fontBig ? 'text-xl' : 'text-base'} 
-        transition-colors delay-200 easse-in-out hover:bg-transparent hover:text-n-1 
+        transition-colors delay-100 easse-in-out hover:bg-transparent hover:text-n-1 
         outline-none border-none cursor-pointer hover:ring-1 hover:ring-brand-purple`} onClick={onClick}>
             {text} {hover? <ChevronRight className="w-6 h-6 ml-2"/> : <MoveRight className="w-6 h-6 ml-2"/>  }
         </LinkS>

@@ -1,11 +1,14 @@
 import { useRef, useState } from "react"
 import Section from "./section";
 import { Button } from "./buttons";
-import astronaut from "/images/hero-section/hero-image.jpg"
+import astronaut from "/images/hero-section/hero-image.jpg";
+import heroBackground from "/images/hero-section/hero-background.png";
 import Generating from "./assets/loading";
 import { ScrollParallax } from "react-just-parallax";
 import { HERO_ICONS } from "../constants";
 import Notification from "./assets/notification";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/hero-design";
+import CompanyLogos from "./assets/company-logos";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
@@ -26,7 +29,7 @@ const Hero = () => {
                     max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
                     <h1 className="h1 mb-6">
                         Exploring the Cosmos, Empowered by AI with {' '}
-                        <span className="inline-block relative gradient-text uppercase tracking-wider text-[3.5rem]">
+                        <span className="inline-block relative gradient-text uppercase tracking-wider text-[3rem]">
                             Nexus. {' '}
                         </span>
                     </h1>
@@ -58,30 +61,41 @@ const Hero = () => {
                                 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2"
                                     text="AI is Generating" />
 
-                                    <ScrollParallax isAbsolutelyPositioned>
-                                        <ul className="hidden absolute 
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <ul className="hidden absolute 
                                         -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10
                                         rounded-2xl xl:flex">
-                                           {HERO_ICONS.map((icon, index) => (
+                                        {HERO_ICONS.map((icon, index) => (
                                             <li className="p-5" key={index}>
                                                 {icon}
                                             </li>
-                                           ))} 
-                                        </ul>
-                                    </ScrollParallax>
+                                        ))}
+                                    </ul>
+                                </ScrollParallax>
 
-                                    <ScrollParallax isAbsolutelyPositioned>
-                                        <Notification
-                                            className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                                            title="Code Generation ..."
-                                        />
-                                    </ScrollParallax>
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <Notification
+                                        className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                                        title="Code Generation ..."
+                                    />
+                                </ScrollParallax>
                             </div>
                         </div>
                         {/**Gradient */}
+                        <Gradient />
                     </div>
+                    <div className="absolute -top-[54%] left-1/2 w-[234%] 
+                    -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+                        <img src={heroBackground} alt="Background" className="w-full" width={1440} height={1800} />
+                    </div>
+                    {/** Background Circles */}
+                    <BackgroundCircles />
                 </div>
+                {/** Company Logos */}
+                <CompanyLogos className="hidden relative z-10 mt-20 lg:block"/>
             </div>
+            {/** Section Bottom Line */}
+            <BottomLine />
         </Section>
     )
 }

@@ -30,6 +30,10 @@ export default {
           13: "#6C7275",
         },
       },
+      fontFamily:{
+        grotesk: "var(--font-grotesk)",
+        gentium: "var(--font-gentium)",
+      },
       letterSpacing: {
         tagline: ".15em",
       },

@@ -1,5 +1,4 @@
 import { USERS } from "../../constants";
-import rocket from "/images/rocket.png";
 type Props = {
     className: string;
     title: string;
@@ -10,7 +9,6 @@ const Notification = ({ className, title }: Props) => {
         <div className={`${className || ""} flex 
         items-center p-4 pr-6 bg-n-9/40 backdrop-blur border 
         border-n-1/10 rounded-2xl gap-5`}>
-            <img src={rocket} alt="Rocket" width={60} height={60} className="rounded-xl"/>
             <div className='flex-1'>
                 <h6 className='mb-1 font-semibold text-base'>
                     {title}

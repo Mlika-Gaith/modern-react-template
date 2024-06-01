@@ -30,7 +30,7 @@ const Navbar =  ({toggle}: Props) =>{
     }
     return(
         <nav className={`bg-brand-background h-[80px] flex justify-center items-center 
-        text-[1.1rem] sticky top-0 z-10 max-md:transition-all max-md:delay-500 max-md:ease`}>
+        text-[1.1rem] sticky top-0 z-[9999] max-md:transition-all max-md:delay-500 max-md:ease`}>
             <div className="flex justify-between h-[80px] z-1 w-full py-0 px-[24px] max-w-[1100px]">
                 <LinkR to="/" className="text-[#fff] justify-self-start cursor-pointer text-[2rem] 
                 flex items-center ml-[24px] font-bold" onClick={toggleHome}>
