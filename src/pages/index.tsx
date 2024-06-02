@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/navbar"
 import Hero from "../components/hero";
-import Benefits from "../components/benefits";
+import Features from "../components/features";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -13,7 +13,7 @@ const Home = () => {
             <Navbar toggle={toggle} />
             <div className="overflow-hidden">
                 <Hero />
-                <Benefits />
+                <Features />
             </div>
 
         </>
