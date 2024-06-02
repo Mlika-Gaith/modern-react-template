@@ -5,7 +5,7 @@ import user2 from "/images/users/user-2.jpg";
 import user3 from "/images/users/user-3.jpg";
 import user4 from "/images/users/user-4.jpg";
 import user5 from "/images/users/user-5.jpg";
-import user6  from "/images/users/user-6.jpg";
+import user6 from "/images/users/user-6.jpg";
 import user7 from "/images/users/user-7.jpg";
 //company-logos
 import company1 from "/images/companies/company-1.png";
@@ -22,10 +22,10 @@ import coffee from "/images/features-section/coffee.svg";
 import rocket from "/images/features-section/rocket.svg";
 
 export const HERO_ICONS = [
-    <Home className='w-6 h-6'/>,
-    <Library className='w-6 h-6'/>,
-    <Search className='w-6 h-6'/>,
-    <Mail className='w-6 h-6'/>
+    <Home className='w-6 h-6' />,
+    <Library className='w-6 h-6' />,
+    <Search className='w-6 h-6' />,
+    <Mail className='w-6 h-6' />
 ]
 
 // Hero Users Example
@@ -46,41 +46,69 @@ export const FEATURES = [
         title: "Query Zone",
         text: "Enables users to promptly discover answers, eliminating the need for extensive research across multiple platforms.",
         icon: chat,
-        light: false,
     },
     {
         id: "1",
         title: "Elevate Daily",
         text: "Through natural language processing, the app comprehends user queries and offers precise, relevant solutions.",
         icon: alarm,
-        light: true,
     },
     {
         id: "2",
         title: "Connect Everywhere",
         text: "Easily reach the AI chatbot from any location, on any device, ensuring convenience and accessibility for all users.",
         icon: cloud,
-        light: false,
     },
     {
         id: "3",
         title: "Swift Response",
         text: "Experience lightning-fast responses with our AI feature, ensuring instant solutions to your inquiries.",
         icon: underline,
-        light: true,
     },
     {
         id: "4",
         title: "Task Automation",
         text: "Automate repetitive tasks and processes with our AI chatbot, saving time and increasing efficiency in your workflows.",
         icon: coffee,
-        light: false,
     },
     {
         id: "5",
         title: "24/7 Availability",
         text: "Access our AI chatbot anytime, anywhere, ensuring round-the-clock support and assistance for your queries.",
         icon: rocket,
-        light: true,
     }
 ]
+
+// Code Support Icons
+export const SLUGS = [
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
+  ];

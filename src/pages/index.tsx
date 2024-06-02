@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/navbar"
 import Hero from "../components/hero";
 import Features from "../components/features";
+import Support from "../components/support";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -14,6 +15,7 @@ const Home = () => {
             <div className="overflow-hidden">
                 <Hero />
                 <Features />
+                <Support/>
             </div>
 
         </>
