@@ -1,4 +1,4 @@
-import { Home, Library, Search, Mail } from 'lucide-react';
+import { Home, Library, Search, Mail, Shuffle, Disc2, Disc3, Disc } from 'lucide-react';
 //users
 import user1 from "/images/users/user-1.jpg";
 import user2 from "/images/users/user-2.jpg";
@@ -79,6 +79,23 @@ export const FEATURES = [
     }
 ]
 
+// Code Support Features
+
+export const CODE_FEATURES = [
+    {
+        id: "0",
+        text: "No steup required. Seamlessly integrate Nexus into your platform without the need for configuration.",
+    },
+    {
+        id: "1",
+        text: "Out-of-the-box Support. Nexus provides extensive language support across various programming languages.",
+    },
+    {
+        id: "2",
+        text: "Cloud sync. Nexus ensures data consistency and accessibility across multiple devices.",
+    }
+]
+
 // Code Support Icons
 export const SLUGS = [
     "typescript",
@@ -111,4 +128,22 @@ export const SLUGS = [
     "androidstudio",
     "sonarqube",
     "figma",
-  ];
+];
+
+// Graphic Support Features
+
+export const GRAPHIC_FEATURES = [
+    "Image Generation",
+    "Image Enhancement",
+    "Smooth Integration",
+]
+
+// Graphic Support Icons
+
+export const GRAPHIC_ICONS = [
+    <Shuffle className='w-6 h-6' />,
+    <Disc className='w-6 h-6' />,
+    <Disc2 className='w-6 h-6' />,
+    <Disc3 className='w-6 h-6' />,
+    <Library className='w-6 h-6' />
+]

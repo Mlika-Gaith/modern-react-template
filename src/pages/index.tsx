@@ -3,6 +3,7 @@ import Navbar from "../components/navbar"
 import Hero from "../components/hero";
 import Features from "../components/features";
 import Support from "../components/support";
+import Services from "../components/services";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -16,6 +17,7 @@ const Home = () => {
                 <Hero />
                 <Features />
                 <Support/>
+                <Services/>
             </div>
 
         </>
