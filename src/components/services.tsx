@@ -6,9 +6,9 @@ import star from "/images/icons/fun-star.svg";
 import cyberNinja from "/images/services-section/cyber-ninja.png";
 import lines from "/images/icons/two-lines.svg"
 import Generating from "./assets/loading";
-import planet from "/images/services-section/cyber-planet.png";
-import soldier from "/images/services-section/soldier.png";
-import { PhotoChatMessage } from "./design/services-design";
+import soldier from "/images/services-section/cyber-person-1.png";
+import person from "/images/services-section/cyber-person-2.png";
+import { PhotoChatMessage, VideoBar, VideoChatMessage } from "./design/services-design";
 
 const Services = () => {
     return <Section id="how-to-use">
@@ -71,8 +71,8 @@ const Services = () => {
 
                         <div className="absolute inset-0 after:absolute after:top-0 after:left-0 after:size-full after:bg-black/40 after:pointer-events-none">
                             <img
-                                src={planet}
-                                className="h-full w-full"
+                                src={soldier}
+                                className="w-full h-full object-cover scale-100 md:scale-100"
                                 alt="robot"
                             />
                         </div>
@@ -120,11 +120,14 @@ const Services = () => {
                             {/** Image Here */}
                             <div className="h-[.3rem] relative z-1 p-0.5 rounded-t-xl bg-brand-purple" />
                             <div className="aspect-[38/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490]">
-                                <img src={soldier} alt="CyberPunk Ninja"
+                                <img src={person} alt="CyberPunk Ninja"
                                     className="w-full h-full object-cover scale-100 md:scale-100" />
                             </div>
 
-
+                            {/** Video Chat Message */}
+                            <VideoChatMessage />
+                            {/** Video Bar */}
+                            <VideoBar />
                         </div>
                     </div>
                 </div>
