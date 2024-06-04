@@ -125,10 +125,10 @@ export default {
             {},
         },
         ".quote": {
-          "@apply font-code text-lg leading-normal": {},
+          "@apply font-grotesk text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
+          "@apply font-grotesk text-xs font-bold uppercase tracking-wider": {},
         },
         ".gradient-text" :{
           "@apply text-transparent bg-gradient-to-r from-brand-purple via-brand-pink to-brand-orange bg-clip-text" : {},

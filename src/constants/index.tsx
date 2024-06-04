@@ -147,3 +147,41 @@ export const GRAPHIC_ICONS = [
     <Disc3 className='w-6 h-6' />,
     <Library className='w-6 h-6' />
 ]
+
+// Pricing
+
+export const OFFERS = [
+    {
+        id: "0",
+        title: "Basic",
+        description: "AI virtual assistant, personalized advice",
+        price: "0",
+        features : [
+            "An intelligent chatbot capable of comprehending your questions",
+            "Customized suggestions tailored to your likes and interests",
+            "Free access to explore the app and all its functionalities"
+        ],
+    },
+    {
+        id: "1",
+        title: "Premium",
+        description: "Enhanced AI agent, premium support, insights dashboard",
+        price: "9.99",
+        features: [
+            "A cutting-edge AI chatbot designed to handle detailed inquiries",
+            "A performance dashboard to monitor your interactions",
+            "Dedicated support for fast troubleshooting",
+        ],
+    },
+    {
+        id: "2",
+        title:  "Enterprise",
+        description: "Custom-built AI chatbot, advanced data analysis, dedicated account manager",
+        price: null,
+        features: [
+            "Connect with CRM, ERP, and other business tools to streamline workflows.",
+            "Designed to handle high volumes of queries and interactions with consistent performance",
+            "Implements stringent security measures and complies with industry standards to protect sensitive data",
+        ],
+    },
+]

@@ -35,17 +35,55 @@ export const Button = ({
     fontBig,
     onClick,
     width,
- }: ButtonProps) => {
+}: ButtonProps) => {
     return (
-        <LinkS to={to} 
-        onMouseEnter={onHover} 
-        onMouseLeave={onHover} 
-        className={`${width} rounded-[5px] flex items-center justify-center
+        <LinkS to={to}
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            className={`${width} rounded-[5px] flex items-center justify-center
         ${primary ? 'bg-brand-purple' : 'bg-brand-purple'} text-n-1 
         ${big ? 'px-12 py-4' : 'px-8 py-3'} ${fontBig ? 'text-xl' : 'text-base'} 
         transition-colors delay-100 easse-in-out hover:bg-transparent hover:text-n-1 
         outline-none border-none cursor-pointer hover:ring-1 hover:ring-brand-purple`} onClick={onClick}>
-            {text} {hover? <ChevronRight className="w-6 h-6 ml-2"/> : <MoveRight className="w-6 h-6 ml-2"/>  }
+            {text} {hover ? <ChevronRight className="w-6 h-6 ml-2" /> : <MoveRight className="w-6 h-6 ml-2" />}
         </LinkS>
     )
+}
+
+type PriceBtnProps = {
+    className?: string;
+    href?: string;
+    onClick?: () => void;
+    children: any;
+}
+
+export const PriceBtn = (
+    { className,
+        href,
+        onClick,
+        children,
+    }:
+        PriceBtnProps) => {
+    const classes = 'button inline-flex justify-center ' +
+        'items-center bg-brand-purple rounded-[4px] border-0 shadow-lg shadow-indigo-500/50' +
+        'box-border text-n-1 cursor-pointer h-[48px] leading-none list-none overflow-hidden px-[16px] relative text-left no-underline' +
+        'select-none whitespace-nowrap text-[18px]' +
+        'focus:ring-2 focus:ring-n-2 focus:ring-inset focus:ring-offset-[1.5px] focus:ring-offset-n-3 ' +
+        'hover:shadow-indigo-500/50 hover:transform hover:-translate-y-[2px]' +
+        'active:shadow-[#D6D6E7_0px_3px_7px_inset] active:transform active:translate-y-[2px]' +
+        `${className ||  ""}`;
+
+    if (href) {
+        return (
+            <a href={href} className={classes}>
+                {children}
+            </a>
+        );
+    } else {
+        return (
+            <button className={classes} onClick={onClick}>
+                {children}
+            </button>
+        );
+    }
 }
