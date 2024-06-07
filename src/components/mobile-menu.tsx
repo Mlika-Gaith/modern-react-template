@@ -13,7 +13,7 @@ const SCROLL_TO: string[] = ["features", "how-to-use", "pricing", "roadmap"];
 const MobileMenu = ({ isOpen, toggle }: Props) => {
   return (
     <aside
-      className={`fixed z-[99999] size-full bg-brand-background 
+      className={`fixed z-[9999] size-full bg-brand-background 
     grid items-center top-0 left-0 transition-all ease-in-out duration-300
     ${isOpen ? "opacity-1" : "opacity-0"} ${isOpen ? "top-0" : "-top-[100%]"}`}
     >
