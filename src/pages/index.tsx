@@ -6,6 +6,7 @@ import Support from "../components/support";
 import Services from "../components/services";
 import Pricing from "../components/pricing";
 import Roadmap from "../components/roadmap";
+import Footer from "../components/footer";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -22,6 +23,7 @@ const Home = () => {
                 <Services/>
                 <Pricing/>
                 <Roadmap/>
+                <Footer/>
             </div>
 
         </>

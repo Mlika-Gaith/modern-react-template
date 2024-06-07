@@ -29,7 +29,7 @@ const Support = () => {
 
                         <div className="relative lg:row-span-4 overflow-hidden">
                             {/** Icons Cloud be Here */}
-                            {/**<IconCloud iconSlugs={SLUGS} />*/}
+                            <IconCloud iconSlugs={SLUGS} />
                         </div>
 
                         <div className="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-neutral-100/10 lg:pt-10">

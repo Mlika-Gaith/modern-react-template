@@ -36,6 +36,8 @@ import image2 from "/images/roadmap-section/image-2.png";
 import image3 from "/images/roadmap-section/image-3.png";
 import image4 from "/images/roadmap-section/image-4.png";
 import { ConfettiCustomShapes } from "../components/confetti";
+// Footer Section
+import { DiscordOutlined, GithubOutlined, LinkedinOutlined, RedditOutlined, TwitterOutlined } from "@ant-design/icons";
 
 
 export const HERO_ICONS = [
@@ -220,7 +222,7 @@ export const ROADMAP_ITEMS = [
     status: "done",
     imageUrl: image1,
     colorful: true,
-    extraJSX: <Message className="left-20 sm:left-[2rem]" text="Try new feature" date="Most Recent"/>,
+    extraJSX: <Message className="left-20 sm:left-[2rem]" text="Try New Feature" date="Most Recent"/>,
   },
   {
     id: "1",
@@ -256,3 +258,98 @@ export const ROADMAP_ITEMS = [
     extraJSX: <ConfettiCustomShapes/>,
   },
 ];
+
+
+// Footer Section
+
+export const FOOTER_LINKS = [
+  {
+    title: "Company",
+    links: [
+      {
+        title: "About",
+        url: "/",
+      },
+      {
+        title: "Careers",
+        url: "/",
+      },
+      {
+        title: "Partners",
+        url: "/",
+      },
+      {
+        title: "Contact",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        title: "Documentation",
+        url: "/",
+      },
+      {
+        title: "Community",
+        url: "/",
+      },
+      {
+        title: "Tutorials",
+        url: "/",
+      },
+      {
+        title: "Blog",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      {
+        title: "Privacy",
+        url: "/",
+      },
+      {
+        title: "Terms",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Social",
+    links: [
+      {
+        title: "Twitter",
+        url: "/",
+      },
+      {
+        title: "LinkedIn",
+        url: "/",
+      },
+      {
+        title: "GitHub",
+        url: "/",
+      },
+      {
+        title: "Reddit",
+        url: "/",
+      },
+      {
+        title: "Discord",
+        url: "/",
+      },
+    ],
+  },
+    
+]
+
+export const SOCIAL_MEDIA_LINKS = [
+  <TwitterOutlined />,
+  <LinkedinOutlined />,
+  <GithubOutlined />,
+  <RedditOutlined />,
+  <DiscordOutlined />,
+]
