@@ -231,7 +231,7 @@ export const ROADMAP_ITEMS = [
     status: "in progress",
     imageUrl: image2,
     colorful: false,
-    extraJSX: <Message className="right-20 sm:right-[2rem]" text="Adding New Feature" date="Coming Soon"/>,
+    extraJSX: <Message className="right-20 sm:right-[2rem] max-sm:left-10" text="Adding New Feature" date="Coming Soon"/>,
   },
   {
     id: "2",

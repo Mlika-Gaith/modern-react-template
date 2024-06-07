@@ -12,7 +12,7 @@ const Card = ({ key, title, text, icon }: Props) => {
     return (
         <div
             key={key}
-            className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+            className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-md:min-w-full lg:max-w-[24rem] "
 
         >
             <div className="relative z-2 flex flex-col min-h-[14rem] p-[2.2rem] pointer-events-none">

@@ -1,6 +1,5 @@
 import { useRef, useState } from "react"
 import Section from "./section";
-import { Button } from "./buttons";
 import astronaut from "/images/hero-section/hero-image.jpg";
 import heroBackground from "/images/hero-section/hero-background.png";
 import Generating from "./assets/loading";
@@ -9,6 +8,7 @@ import { HERO_ICONS } from "../constants";
 import Notification from "./assets/notification";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/hero-design";
 import CompanyLogos from "./assets/company-logos";
+import ShimmerButton from "./shimmer-button";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
@@ -38,12 +38,11 @@ const Hero = () => {
                         elevate your Efficiency with Nexus, the Stellar AI Companion.
                     </p>
                     <div className="flex items-center justify-center">
-                        <Button
-                            to="/pricing"
-                            onHover={onHover}
-                            hover={hover}
-                            text="Get Started"
-                        />
+                        <ShimmerButton background="#8713D5" shimmerSize="0.1rem">
+                            <a className="text-n-1 whitespace-pre-wrap text-center text-lg tracking-tight font-gentium">
+                                Get Started
+                            </a>
+                        </ShimmerButton>
                     </div>
                 </div>
                 <div className="relative max-w-[23rem] 

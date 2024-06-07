@@ -14,8 +14,8 @@ const CompanyLogos = ({className} : Props) =>{
                 {COMPANY_LOGOS.map((item, index) =>(
                     <li className="flex items-center justify-center flex-1 h-[8.5rem]" 
                     key={index}>
-                        <img src={item} alt="Company" height={20} width={20}/>
-                        <span className="body-1 text-[1.1rem] ml-2">{COMPANY_NAMES[index]}</span>
+                        <img src={item} alt="Company" height={40} width={40}/>
+                        <span className="body-1 text-[1.3rem] ml-2">{COMPANY_NAMES[index]}</span>
                     </li>
                 ))}
             </ul>

@@ -7,8 +7,8 @@ type Props = {
 }
 export const Message = ({className, text, date}: Props) => {
     return (
-        <div className={`absolute top-40 w-full max-w-[14rem] pt-2.5 pr-2.5 
-            pb-8 pl-5 bg-brand-purple/80 rounded-xl font-gentium text-md md:max-w-[17.5rem] ${className}`}>
+        <div className={`absolute z-5 top-40 w-full max-w-[14rem] pt-2.5 pr-2.5 
+            pb-8 pl-5 bg-brand-purple rounded-xl font-gentium text-md md:max-w-[17.5rem] ${className}`}>
             {text}
             <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center
                     w-[2.5rem] h-[2.5rem] bg-black rounded-[0.75rem]">

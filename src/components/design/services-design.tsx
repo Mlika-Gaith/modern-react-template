@@ -35,10 +35,10 @@ export const VideoChatMessage = () => {
 
 export const VideoBar = () => {
     return (
-        <div className="absolute left-0 w-full flex items-center p-6">
+        <div className="z-5 absolute bottom-80 w-full flex items-center p-6">
             <CirclePlay
-                width={26}
-                height={26}
+                width={24}
+                height={24}
                 className="object-contain mr-3" />
             <div className="flex-1 bg-[#D9D9D9]">
                 <div className="w-1/2 h-1 bg-color-1" />

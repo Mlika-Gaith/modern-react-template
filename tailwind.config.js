@@ -66,16 +66,28 @@ export default {
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
       },
+      animation: {
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        slide: "slide var(--speed) ease-in-out infinite alternate",
+      },
       keyframes: {
-        "shine-pulse": {
+        "spin-around": {
           "0%": {
-            "background-position": "0% 0%",
+            transform: "translateZ(0) rotate(0)",
           },
-          "50%": {
-            "background-position": "100% 100%",
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
           },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
+        slide: {
           to: {
-            "background-position": "0% 0%",
+            transform: "translate(calc(100cqw - 100%), 0)",
           },
         },
       },
