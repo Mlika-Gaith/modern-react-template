@@ -7,6 +7,7 @@ import Services from "../components/services";
 import Pricing from "../components/pricing";
 import Roadmap from "../components/roadmap";
 import Footer from "../components/footer";
+import MobileMenu from "../components/mobile-menu";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -15,6 +16,7 @@ const Home = () => {
     }
     return (
         <>
+        <MobileMenu isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle} />
             <div className="overflow-hidden">
                 <Hero />
