@@ -1,73 +1,71 @@
-import {
-  GithubOutlined,
-  GoogleOutlined,
-  LinkedinOutlined,
-} from "@ant-design/icons";
-import React from "react";
+import { useState } from "react";
+import { FormButton } from "./buttons";
+import SignInForm from "./sign-in-form";
+import SignUpForm from "./sign-up-form";
 
-type Props = {};
 
-const OAUTH_OPTIONS: any[] = [
-  <GoogleOutlined />,
-  <GithubOutlined />,
-  <LinkedinOutlined />,
-];
+const Form = () => {
+  const [isRightPanelActive, setIsRightPanelActive] = useState(false);
 
-const Form = (props: Props) => {
+  const onBtnClick = () => {
+    setIsRightPanelActive(!isRightPanelActive);
+  };
+
   return (
-    <div className="flex items-center justify-center flex-col mt-[20px] mx-auto mb-0">
+    <div className="flex items-center justify-center flex-col mx-auto mb-0">
       <div
         className="relative rounded-[10px] overflow-hidden 
         w-[768px] max-w-full min-h-[480px]
         shadow-[0_14px_28px_rgba(0,0,0,0.25),_0_10px_10px_rgba(0,0,0,0.22)]"
       >
+        {/** First Form */}
+        <SignInForm isRightPanelActive={isRightPanelActive}/>
+        {/** Second Form */}
+        <SignUpForm isRightPanelActive={isRightPanelActive}/>
+
+        {/**Overlay container */}
         <div
-          className="absolute 
-            top-0 h-full transition-all duration-500 ease-in-out
-            left-0 w-[50%] z-2"
+          className={`
+          absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-500 ease-in-out z-[100]
+          ${isRightPanelActive ? "translate-x-[-100%]" : "translate-x-0"}
+          `}
         >
-          <form
-            action="#"
-            className="flex items-center justify-center flex-col py-0 px-[50px] h-full text-center"
+          <div
+            className={`
+              bg-purple-gradient bg-cover bg-no-repeat text-n-1 relative left-[-100%] h-full w-[200%]
+        transform translate-x-0 transition-transform duration-500 ease-in-out ${
+          isRightPanelActive ? "translate-x-1/2" : "translate-x-0"
+        }
+              `}
           >
-            <h1 className="h3 m-0">Create Account</h1>
-            <div className="my-[20px] mx-0">
-              {OAUTH_OPTIONS.map((item, index) => (
-                <a
-                  key={index}
-                  className="cursor-pointer inline-flex 
-                  items-center justify-center mt-0 mx-[5px] 
-                  h-[40px] w-[40px] text-[1.5rem] hover:text-brand-orange"
-                >
-                  {item}
-                </a>
-              ))}
+            {/** Left overlay panel */}
+            <div
+              className={`
+                absolute flex items-center justify-center flex-col py-0 px-[40px]
+          text-center yop-0 h-full w-1/2 transform transition-transform duration-500 ease-in-out
+          ${isRightPanelActive ? "translate-x-0" : "translate-x-[-20%]"}
+                `}
+            >
+              <h1 className="h3 m-0">Welcome Back</h1>
+              <p className="text-[14px] font-extralight leading-5 letter tracking-[0.5px] mr-0 mt-[20px] mb-[30px]">
+                To keep connected with us please login with your personal info
+              </p>
+              <FormButton className="bg-transparent" text="Sign In" onClick={onBtnClick}/>
             </div>
-            <span className="text-n-3 text-[14px]">or use your account</span>
-            <input 
-            type="text" 
-            placeholder="Name"
-            className="bg-n-6 
-            border-none py-[12px] px-[15px] my-[8px] mx-0 w-full"
-            />
-            <input 
-            type="email" 
-            placeholder="Email"
-            className="bg-n-6 
-            border-none py-[12px] px-[15px] my-[8px] mx-0 w-full"
-            />
-            <input 
-            type="password" 
-            placeholder="Password"
-            className="bg-n-6 
-            border-none py-[12px] px-[15px] my-[8px] mx-0 w-full"
-            />
-            <button className="rounded-[20px] border border-brand-purple bg-brand-purple 
-            text-n-1 text-[16px] font-bold py-[12px] px-[45px] my-2
-            uppercase transition-all duration-75 ease-in">
-                Sign Up
-            </button>
-          </form>
+            {/** Right overlay panel*/}
+            <div
+              className={`absolute flex items-center justify-center flex-col py-0 px-[40px]
+          text-center yop-0 h-full w-1/2 transform transition-transform duration-500 ease-in-out right-0
+          ${isRightPanelActive ? "translate-x-[20%]" : "translate-x-0"}
+                `}
+            >
+              <h1 className="h3 m-0">Hello There</h1>
+              <p className="text-[14px] font-extralight leading-5 letter tracking-[0.5px] mr-0 mt-[20px] mb-[30px]">
+                Enter your personal details and start journey with us
+              </p>
+              <FormButton className="bg-transparent" text="Sign Up" onClick={onBtnClick}/>
+            </div>
+          </div>
         </div>
       </div>
     </div>

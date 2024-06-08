@@ -70,6 +70,7 @@ export default {
       animation: {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
+        show: 'show 0.6s ease-in-out forwards',
       },
       keyframes: {
         "spin-around": {
@@ -89,6 +90,16 @@ export default {
         slide: {
           to: {
             transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
+        show: {
+          '0%, 49.99%': {
+            opacity: 0,
+            zIndex: 1,
+          },
+          '50%, 100%': {
+            opacity: 1,
+            zIndex: 5,
           },
         },
       },
