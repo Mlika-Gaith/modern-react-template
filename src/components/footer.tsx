@@ -1,7 +1,8 @@
 import { FOOTER_LINKS } from "../constants";
 import Section from "./section";
 import logo from "/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link as LinkR} from "react-router-dom";
+import {Link as LinkS} from "react-scroll"
 import { SOCIAL_MEDIA_LINKS } from '../constants/index';
 
 const Footer = () => {
@@ -19,13 +20,13 @@ const Footer = () => {
                   {footerLink.title}
                 </h1>
                 {footerLink.links.map((link, linkIndex) => (
-                  <Link
+                  <LinkR
                     key={`${footerLink.title}-${linkIndex}`}
                     to={link.url}
                     className="text-n-3 underline-none mb-2 text-md hover:text-brand-purple ease-out transition-colors duration-300"
                   >
                     {link.title}
-                  </Link>
+                  </LinkR>
                 ))}
               </div>
             ))}
@@ -34,8 +35,8 @@ const Footer = () => {
 
         <div className="max-w-[1000px] w-full">
           <div className="flex justify-between items-center mx-auto my-5 max-md:flex-col">
-            <Link
-              to="/"
+            <LinkS
+              to="hero"
               className="text-n-1 justify-start cursor-pointer underline-none text-[1.5rem] flex items-center font-bold max-md:mb-4"
             >
               <img
@@ -46,19 +47,19 @@ const Footer = () => {
                 className="mr-2"
               />
               Nexus
-            </Link>
+            </LinkS>
             <p className="text-n-3 max-md:mb-4">
               Nexus &trade; {new Date().getFullYear()} Registered TradeMark.
             </p>
             <div className="flex justify-between items-center w-[240px] max-md:mb-4">
               {SOCIAL_MEDIA_LINKS.map((item, index) =>(
-                <Link
+                <LinkR
                 key={`social-${index}`}
                 to="/"
                 className="text-n-4 text-[1.5rem] hover:text-brand-orange transition-colors duration-200 ease-in-out"
               >
                {item}
-              </Link>
+              </LinkR>
               ))}
             </div>
           </div>

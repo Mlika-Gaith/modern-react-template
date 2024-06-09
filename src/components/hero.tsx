@@ -9,6 +9,7 @@ import Notification from "./assets/notification";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/hero-design";
 import CompanyLogos from "./assets/company-logos";
 import ShimmerButton from "./shimmer-button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
@@ -35,9 +36,9 @@ const Hero = () => {
                     </p>
                     <div className="flex items-center justify-center">
                         <ShimmerButton background="#8713D5" shimmerSize="0.1rem">
-                            <a className="text-n-1 whitespace-pre-wrap text-center text-lg tracking-tight font-gentium">
+                            <Link to="/sign-in" className="z-2 text-n-1 whitespace-pre-wrap text-center text-lg tracking-tight font-gentium">
                                 Get Started
-                            </a>
+                            </Link>
                         </ShimmerButton>
                     </div>
                 </div>

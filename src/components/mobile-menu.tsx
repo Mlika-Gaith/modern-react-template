@@ -15,7 +15,7 @@ const MobileMenu = ({ isOpen, toggle }: Props) => {
     <aside
       className={`fixed z-[9999] size-full bg-brand-background 
     grid items-center top-0 left-0 transition-all ease-in-out duration-300
-    ${isOpen ? "opacity-1" : "opacity-0"} ${isOpen ? "top-0" : "-top-[100%]"}`}
+    ${isOpen ? "top-0 opacity-1" : "top-[-100%] opacity-1"}`}
     >
       <div
         className="absolute top-[1.2rem] text-n-1 right-[1.5rem] bg-transparent cursor-pointer text-[2rem] outline-none"
