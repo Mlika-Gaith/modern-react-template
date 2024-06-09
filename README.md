@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+# Modern React Template AI Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern UI/UX template for an AI website, developed using React, Vite, and Tailwind CSS. It provides a sleek, responsive design that can be easily customized to fit your needs.
 
-Currently, two official plugins are available:
+<div align="center">
+  <br />
+      <img src="public/images/project-banner.png" alt="Project Banner"/>
+  <br />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge"/>
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React Badge"/>
+  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS Badge"/>
+</div>
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Modern UI/UX design
+- Fully responsive
+- Built with React, Vite, and Tailwind CSS
+- Includes sign-in and sign-up forms
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js and npm installed on your machine. You can download Node.js [here](https://nodejs.org/en/download/) and npm is included in the installation.
+
+### Cloning the Repository
+
+To clone the repository and start working on it, open your terminal and run:
+
+```bash
+git clone https://github.com/Mlika-Gaith/modern-react-template.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Installing Dependencies
+
+Navigate into the cloned repository:
+
+```bash
+cd your-repo-name
+```
+
+Then, install the project dependencies:
+
+```bash
+npm install
+```
+
+### Running the App
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+The application should be running on [http://localhost:5173/](http://localhost:5173/)
