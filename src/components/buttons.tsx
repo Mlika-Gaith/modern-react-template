@@ -17,7 +17,7 @@ export const NavButton = () => {
 };
 
 type ButtonProps = {
-  to?: string;
+  to: string;
   hover: boolean;
   onHover: () => void;
   primary?: boolean;
