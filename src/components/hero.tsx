@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef} from "react"
 import Section from "./section";
 import astronaut from "/images/hero-section/hero-image.jpg";
 import heroBackground from "/images/hero-section/hero-background.png";
@@ -12,10 +12,6 @@ import ShimmerButton from "./shimmer-button";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
-    const [hover, setHover] = useState<boolean>(false)
-    const onHover = () => {
-        setHover(!hover)
-    }
 
     return (
         <Section

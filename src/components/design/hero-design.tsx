@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import PlusSvg from "../assets/plus-svg";
 export const Gradient = () => {
     return (
@@ -19,15 +18,9 @@ export const BottomLine = () => {
     )
 }
 
-type bgCirclesProps = {
-    parallaxRef?: any;
-}
 
-export const BackgroundCircles = ({ parallaxRef }: bgCirclesProps) => {
-    const [mounted, setMounted] = useState(false)
-    useEffect(() => {
-        setMounted(true);
-    })
+
+export const BackgroundCircles = () => {
     return (
         <div className="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square 
         border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[33.8rem] xl:-top-[32rem]">
